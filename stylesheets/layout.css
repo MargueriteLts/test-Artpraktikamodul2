@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 500%;
+  position: absolute;
+  height: auto;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(91,81,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+#title {
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  transform: scale(0.8);
+}
+#cloud1 {
+  position: absolute;
+  left: 15%;
+  transform: scale(0.5);
+  bottom: 0;
+}
+#cloud2 {
+  position: absolute;
+  left: 20%;
+  opacity: .5;
+  transform: scale(0.5);
+  bottom: 0;
+}
+#train {
+  position: sticky;
+  width: 20vh;
+  top: 60vh;
+  left: 25vw;
+  transform: translateX(-50%) translateY(-50%);
+}
