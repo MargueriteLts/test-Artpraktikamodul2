@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title></title>
+    <style media="screen">
+
+    .container {
+      background: linear-gradient(90deg, rgba(91,81,255,1) 0%, rgba(255,255,255,1) 100%);
+      width: 800%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .modeliphone {
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+    }
+    .modelipadportrait {
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+    }
+    .modelmacbook13 {
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+    }
+
+      h1, p {
+        font-family: 'Gotham', sans-serif;
+        color: white;
+        position: absolute;
+        left: 2%;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 3.3vw;
+      }
+      p {
+        font-weight: lighter;
+        font-size: 2.8vw;
+        line-height: 2vh;
+      }
+      #quotes p {
+        position: absolute;
+        font-weight: normal;
+        font-size: 3.5vw;
+      }
+      .q1 {
+        left: 14.5%; top: 35%;
+      }
+      .q2 {
+        width: 7%; left: 25.5%; bottom: 27%;
+      }
+      .q3 {
+        left: 41%; bottom: 25%;
+      }
+      .q4 {
+        left: 64%; top: 43%;
+      }
+      .station {
+        position: absolute;
+        width: 10%;
+        height: 100vh;
+        margin-left: 32%;
+        bottom: 0;
+      }
+      .star1 {
+        position: absolute; width: 40%; left: 5%; top: 2%;
+      }
+      .star2 {
+        position: absolute; width: 67%; left: 15%; top: 15%;
+      }
+      .star3 {
+        position: absolute; width: 40%; left: -18%; top: 67%;
+      }
+      .star4 {
+        position: absolute; width: 30%; left: 50%; top: 74%;
+      }
+      .arrow {
+        position: absolute;
+        left: 25%;
+        width: 39%;
+        bottom: -0.5%;
+      }
+      .txtwhite1 {
+        position: absolute; left: 67%; width: 13%; top: 5%;
+      }
+      .txtblue1 {
+        position: absolute; left: 76%; width: 11%; bottom: 10%;
+      }
+      .txtwhite2 {
+        display: none; position: absolute; left: 72%; width: 7%; bottom: 3%;
+      }
+      .txtblue2 {
+        display: none; position: absolute; left: 73.5%; width: 5%; top: 15%;
+      }
+      .smallcloudbig {
+        position: absolute;
+        width: 10%;
+        left: -4.5%;
+        bottom: -13%;
+        opacity: 0.5;
+      }
+      .smallcloudbig2 {
+        position: absolute;
+        width: 9%;
+        left: 15%;
+        bottom: -15%;
+        opacity: 0.5;
+        display: none;
+      }
+      .smallcloud {
+        width: 4%;
+        position: absolute;
+      }
+      .sc1 {
+        left: 21%;
+        top: -4%;
+        opacity: 0.5;
+      }
+      .sc2 {
+        left: 28%;
+        top: 10%;
+      }
+      .sc3 {
+        left: 50%; top: 45%;
+      }
+      .sc4 {
+        left: 54%; top: -2%; opacity: 0.5;
+      }
+      .sc5 {
+        left: 58%; bottom: -6%; opacity: 0.5;
+      }
+      .sc6 {
+        left: 64%; top: -5%;
+      }
+      .sc7 {
+        left: 73%; top: 35%;
+      }
+      .sc8 {
+        left: 79%; top:-6%; opacity: 0.5;
+      }
+      .sc9 {
+        left: 78%; bottom: -5%;
+      }
+      .sc10 {
+        display: none; left: 80%; top: 5%;
+      }
+      .bigcloud {
+        width: 7%;
+        bottom: 22%;
+        position: absolute;
+      }
+      .bc-b {
+        left: 8%; opacity: 0.5;
+      }
+      .bc-a {
+        left: 6%;
+      }
+      .bigcloudc {
+        position: absolute;
+        left: 81.3%; top: 17%; width: 7%;
+      }
+      #title {
+        width: 15.7%;
+        left: 1.7%;
+        top: 5.4%;
+        position: absolute;
+        /* background: red; */
+      }
+      #subtitle {
+        top: 22%;
+      }
+      #subsub {
+        width: 63vw;
+        top: 26%;
+      }
+      #train {
+        position: fixed;
+        left: 3%;
+        top: 52vh;
+        width: 7%;
+      }
+      .destination {
+        width: 10%;
+        position: absolute;
+      }
+      .d-a {
+        left: 15.5%; bottom: 3%;
+      }
+      .d-b {
+        left: 40%; top: 10%;
+      }
+      .d-c {
+        left: 65%; bottom: 3%;
+      }
+      .bgend {
+        position: absolute;
+        width: 15%;
+        top: 0; right: 0;
+        height: 100vh;
+        background: linear-gradient(90deg, rgba(222,220,255,0) 0%, rgba(227,225,255,1) 20%, rgba(255,255,255,1) 100%);
+        display: block; /* for coding, to erase for final version */
+      }
+      .buble {
+        position: absolute; width: 16%; left: 90%; bottom: -22%;
+      }
+      .logo {
+        position: absolute; width: 3.5%; left: 91.3%; top: 42%;
+      }
+      .endtxt {
+        position: absolute;
+        left: 91.2%;
+        top: 32%;
+        color: blue;
+        text-align: center;
+        line-height: 3vw;
+        font-size: 2.6vw;
+      }
+
+      /* iPad portrait */
+      @media only screen and (min-width: 768px) {
+        .container {
+          width: 600%;
+        }
+        .modelipadportrait {
+          display: none;
+        }
+        .modeliphone {
+          display: none;
+        }
+        h1, p {
+          left: 1.5%
+        }
+        h1 {
+          font-size: 2.5vw;
+        }
+        p {
+          font-size: 2vw;
+        }
+        #quotes p {
+          font-size: 2.4vw;
+        }
+        .q1 {
+          left: 23%;
+        }
+        .q2 {
+          left: 34%;
+          bottom: 30%;
+        }
+        .q3 {
+          left: 53%;
+          bottom: 39%;
+        }
+        .q4 {
+          left: 70%;
+          top: 35%;
+        }
+        .station {
+          margin-left: 41%;
+        }
+        .star1 {
+          width: 45%;
+          left: 9%;
+          top: 4%;
+        }
+        .star2 {
+          width: 75%;
+          left: 23%;
+        }
+        .arrow {
+          width: 45%;
+          left: 23%;
+        }
+        .txtwhite1 {
+          width: 11%;
+          left: 69%;
+          top: 10%;
+        }
+        .txtblue1 {
+          width: 9%;
+          left: 75.5%;
+          bottom: 27%;
+        }
+        .smallcloudbig {
+          left: -4%;
+          bottom: -5%;
+          opacity: 0.5;
+        }
+        .smallcloudbig2 {
+          display: block;
+        }
+        .sc1 {
+          left: 29%;
+        }
+        .sc2 {
+          left: 32%;
+          top: 92%;
+        }
+        .sc3 {
+          left: 35%;
+          top: 15%;
+        }
+        .sc4 {
+          left: 56%; top: 70%; opacity: 1;
+        }
+        .sc5 {
+          left: 64%; bottom: -6%;
+        }
+        .sc6 {
+          display: none;
+        }
+        .sc7 {
+          display: none;
+        }
+        .bigcloud {
+          width: 10%;
+          bottom: 23%;
+        }
+        .bc-b {
+          left: 11%;
+        }
+        .bc-a {
+          left: 8%;
+        }
+        .bigcloudc {
+          left: 79%; top: 30%;
+        }
+        #title {
+          width: 23%;
+          left: 1%;
+          top: 4.5%;
+        }
+        #subtitle {
+          top: 24.5%;
+        }
+        #subsub {
+          top: 27%;
+          width: 45vw;
+        }
+        #train {
+          left: 2%;
+          top: 48vh;
+        }
+        .destination {
+          width: 12%;
+        }
+        .d-a {
+          left: 22.5%;
+          bottom: 12%;
+        }
+        .d-b {
+          left: 50.5%;
+        }
+        .d-c {
+          left: 67%;
+        }
+        .bgend {
+          width: 20%;
+        }
+        .buble {
+        width: 17%; left: 87%; bottom: -30%;
+        }
+        .logo {
+          width: 5%; left: 88%; top: 55%;
+        }
+        .endtxt {
+          left: 89%;
+          top: 40%;
+          font-size: 2vw;
+        }
+      }
+
+      /* iPad landscape */
+      @media only screen and (min-width: 1024px) {
+        .container {
+          width: 500%;
+        }
+      }
+
+      /* desktop (MacBook Pro ’13-1280) */
+      @media only screen and (min-width: 1280px) {
+        .container {
+          width: 500%;
+        }
+        .modeliphone {
+          display: none;
+        }
+        .modelipadportrait {
+          display: none;
+        }
+        .modelmacbook13 {
+          display: none;
+        }
+        h1, p {
+          left: 2.5%;
+        }
+        h1 {
+          font-size: 1.4vw;
+        }
+        p {
+          font-size: 1.2vw;
+        }
+        #quotes p {
+          font-size: 1.35vw;
+        }
+        .q1 {
+          left: 20.3%; top: 83%;
+        }
+        .q2 {
+          left: 29%; bottom: 62%;
+        }
+        .q3 {
+          left: 41.5%; bottom: 43%;
+        }
+        .q4 {
+          left: 65%; top: 36%;
+        }
+        .station {
+          width: 9%;
+          margin-left: 35%;
+        }
+        .star1 {
+          left: -4%; top: 0;
+        }
+        .star2 {
+          left: 3%; top: 8%;
+        }
+        .star3 {
+          top: 65%;
+        }
+        .star4 {
+          left: 34%;
+        }
+        .arrow {
+          left: 29.5%;
+          width: 27%;
+        }
+        .txtwhite1 {
+          left: 62%; width: 6%; top: 5%;
+        }
+        .txtblue1 {
+          left: 66%; width: 6%; bottom: 15%;
+        }
+        .txtwhite2 {
+          display: block;
+        }
+        .txtblue2 {
+          display: block;
+        }
+        .smallcloudbig {
+          width: 3%;
+          left: -1%;
+          bottom: -4%;
+        }
+        .smallcloudbig2 {
+          display: none;
+        }
+        .smallcloud {
+          width: 3%;
+        }
+        .sc1 {
+          left: 19%;
+          top: 40%;
+          opacity: 1;
+        }
+        .sc2 {
+          left: 31%;
+          top: -7%;
+          opacity: 0.5;
+        }
+        .sc3 {
+          left: 47%; top: 58%;
+        }
+        .sc4 {
+          left: 52%; top: 90%; opacity: 0.5;
+        }
+        .sc5 {
+          left: 58%; bottom: 60%; opacity: 1;
+        }
+        .sc6 {
+          display: block; left: 69%; top: -5%; opacity: 0.5;
+        }
+        .sc7 {
+          display: block; left: 71%; top: 43%;
+        }
+        .sc8 {
+          left: 79%; top:60%; opacity: 0.5;
+        }
+        .sc9 {
+          display: none;
+        }
+        .bigcloud {
+          width: 9%;
+          bottom: -10%;
+        }
+        .bc-b {
+          left: 9%;
+        }
+        .bc-a {
+          left: 7%;
+        }
+        .bigcloudc {
+          left: 76%; top: 17%; width: 6%;
+        }
+        #title {
+          width: 26.5%;
+          left: 2%;
+          top: 5.5%;
+        }
+        #subtitle {
+          top: 43%;
+        }
+        #subsub {
+          width: 25vw;
+          top: 46%;
+        }
+        #train {
+          left: 12%;
+          top: 62vh;
+          width: 15%;
+        }
+        .destination {
+          width: 8.5%;
+        }
+        .d-a {
+          left: 26%; bottom: 3%;
+        }
+        .d-b {
+          left: 43.5%; top: 10%;
+        }
+        .d-c {
+          left: 60%; bottom: 3%;
+        }
+        .bgend {
+          width: 24%;
+        }
+        .buble {
+          left: 89%; bottom: -50%;
+        }
+        .logo {
+          width: 4%; left: 86.5%; top: 75%;
+        }
+        .endtxt {
+          left: 86.5%;
+          top: 54%;
+          color: blue;
+          text-align: center;
+          line-height: 2.5vw;
+          font-size: 1.5vw;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <img src="images/iphone.svg" alt="bgiphonemodel" class="modeliphone">
+      <img src="images/ipadportrait.svg" alt="bgipadportraitmodel" class="modelipadportrait">
+      <img src="images/macbook13.jpg" alt="bgmacbook13model" class="modelmacbook13">
+
+      <div class="station">
+            <img src="images/STATION.svg" alt="station" style="position: absolute; height: 95vh; bottom: -1vh; left: 0;">
+            <img src="images/STAR.svg" class="star1" alt="star1">
+            <img src="images/STAR.svg" class="star2" alt="star2">
+            <img src="images/STAR.svg" class="star3" alt="star3">
+            <img src="images/STAR.svg" class="star4" alt="star4">
+      </div>
+
+      <!-- station END -->
+      <img src="images/ARROW.svg" alt="arrow" class="arrow">
+      <img src="images/TXTWHITE.svg" alt="txtwhite1" class="txtwhite1">
+      <img src="images/TXTBLUE.svg" alt="txtblue1" class="txtblue1">
+      <img src="images/TXTBLUE.svg" alt="txtblue2" class="txtblue2">
+      <img src="images/TXTWHITE.svg" alt="txtwhite2" class="txtwhite2">
+
+      <!-- smallcloud START -->
+      <img src="images/SmallCloud.svg" alt="smallcloudbigcloud" class="smallcloudbig">
+      <img src="images/SmallCloud.svg" alt="smallcloudbigcloud" class="smallcloudbig2">
+      <img src="images/SmallCloud.svg" alt="smallcloud1" class="smallcloud sc1">
+      <img src="images/SmallCloud.svg" alt="smallcloud2" class="smallcloud sc2">
+      <img src="images/SmallCloud.svg" alt="smallcloud3" class="smallcloud sc3">
+      <img src="images/SmallCloud.svg" alt="smallcloud4" class="smallcloud sc4">
+      <img src="images/SmallCloud.svg" alt="smallcloud5" class="smallcloud sc5">
+      <img src="images/SmallCloud.svg" alt="smallcloud6" class="smallcloud sc6">
+      <img src="images/SmallCloud.svg" alt="smallcloud7" class="smallcloud sc7">
+      <img src="images/SmallCloud.svg" alt="smallcloud8" class="smallcloud sc8">
+      <img src="images/SmallCloud.svg" alt="smallcloud9" class="smallcloud sc9">
+      <img src="images/SmallCloud.svg" alt="smallcloud10" class="smallcloud sc10">
+      <img src="images/BigCloud.svg" alt="bigcloudfullop" class="bigcloudc">
+      <!-- smallcloud END -->
+      <!-- txt START -->
+      <img src="images/OBLAKOVOS.svg" alt="title" id="title">
+      <h1 id="subtitle">ПЕРВЫЙ АЭРОБЛАЧНЫЙ ВОКЗАЛ В МИРЕ</h1>
+      <p id="subsub">Сядьте в один из наших облачных поездов <br> и позвольте вас доставить в пункт назначения по вашему выбору.</p>
+
+      <div id="quotes">
+            <p class="q1">Наслаждайтесь расслабляющей поездкой</p>
+            <p class="q2">Приезжайте в Облаковос, <br> и вы испытаете лучшее путешествие в своей жизни.</p>
+            <p class="q3">свобода и безграничные возможности</p>
+            <p class="q4">забронируйте билеты прямо сейчас <br> в пункт назначения своей мечты</p>
+      </div>
+      <!-- title END -->
+
+      <!-- bigcloudunder -->
+      <img src="images/BigCloud.svg" alt="bigcloudlessop" class="bigcloud bc-b">
+      <!-- TRAIN -->
+      <img src="images/TRAIN.svg" alt="train" id="train">
+      <!-- end cache -->
+      <div class="bgend"></div>
+      <!-- bigcloudtop -->
+      <img src="images/BigCloud.svg" alt="bigcloudfullop" class="bigcloud bc-a">
+
+      <!-- lastsection START -->
+      <img src="images/MINIcloud.svg" alt="minicloud-г1" style="position: absolute; width: 1.5%; left: 82.9%; top: 5%;">
+      <img src="images/MINIcloud.svg" alt="minicloud-г2" style="position: absolute; width: 1.5%; left: 82.9%; top: 5%;">
+      <img src="images/MINIcloud.svg" alt="minicloud-г3" style="position: absolute; width: 1.5%; left: 82.9%; top: 10%;">
+      <img src="images/MINIcloud.svg" alt="minicloud-г4" style="position: absolute; width: 1.5%; left: 82.9%; top: 7.5%;">
+      <img src="images/MINIcloud.svg" alt="minicloud-г5" style="position: absolute; width: 1.5%; left: 82.9%; top: 5%;">
+      <img src="images/MINIcloud.svg" alt="minicloud-г6" style="position: absolute; width: 1.5%; left: 83.3%; top: 5%;">
+      <img src="images/MINIcloud.svg" alt="minicloud-г7" style="position: absolute; width: 1.5%; left: 83.7%; top: 5%;">
+      <!-- infos -->
+      <img src="images/buble.svg" alt="bubles" class="buble">
+      <img src="images/LOGO.svg" alt="logo" class="logo">
+      <p class="endtxt">На нашем сайте: oblakovos.world <br>Прямо в Облаквосе</p>
+      <!-- lastsection END -->
+
+      <!-- destinations START -->
+      <div class="destination d-a">
+        <img src="images/CloudBottom.svg" alt="cloudbottom" style="width: 70%;">
+        <img src="images/CloudTop.svg" alt="cloudtop" style="width: 85%; position: absolute; left: 10%; bottom: -5%;">
+      </div>
+
+      <div class="destination d-b">
+        <img src="images/CloudBottom.svg" alt="cloudbottom" style="width: 70%;">
+        <img src="images/CloudTop.svg" alt="cloudtop" style="width: 85%; position: absolute; left: 10%; bottom: -5%;">
+      </div>
+
+      <div class="destination d-c">
+        <img src="images/CloudBottom.svg" alt="cloudbottom" style="width: 70%;">
+        <img src="images/CloudTop.svg" alt="cloudtop" style="width: 85%; position: absolute; left: 10%; bottom: -5%;">
+      </div>
+      <!-- destinations END -->
+
+    </div>
+  </body>
+</html>
