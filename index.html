@@ -83,15 +83,19 @@
       }
       .star1 {
         position: absolute; width: 40%; left: 5%; top: 2%;
+        animation: brille 5s linear infinite alternate;
       }
       .star2 {
         position: absolute; width: 67%; left: 15%; top: 15%;
+        animation: brille 5s linear 1s infinite alternate;
       }
       .star3 {
         position: absolute; width: 40%; left: -18%; top: 67%;
+        animation: brille 5s linear 2s infinite alternate;
       }
       .star4 {
         position: absolute; width: 30%; left: 50%; top: 74%;
+        animation: brille 5s linear 3s infinite alternate;
       }
       .arrow {
         position: absolute;
@@ -241,6 +245,16 @@
         line-height: 3vw;
         font-size: 2.6vw;
       }
+
+      /* ANIMATIONS */
+      @keyframes brille {
+        0% {opacity: 0;}
+        25% {opacity: 1;}
+        50% {opacity: 0;}
+        75% {opacity: 1;}
+        100% {opacity: 0;}
+      }
+
 
       /* iPad portrait */
       @media only screen and (min-width: 768px) {
